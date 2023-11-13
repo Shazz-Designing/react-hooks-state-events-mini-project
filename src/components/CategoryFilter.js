@@ -4,13 +4,8 @@ function CategoryFilter({ categories, onSelectCategory }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const handleCategoryClick = (category) => {
-    // Update the selected category
     setSelectedCategory(category);
-
-    // Call the onSelectCategory callback to filter tasks
-    if (onSelectCategory) {
-      onSelectCategory(category);
-    }
+    onSelectCategory(category);
   };
 
   return (
